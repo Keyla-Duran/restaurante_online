@@ -1,0 +1,354 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+    --forest: #243D30;
+    --forest-light: #365642;
+    --olive: #71845B;
+    --olive-light: #E5EAD9;
+    --brown: #795438;
+    --brown-dark: #513923;
+    --gold: #B58B5B;
+    --cream: #F3EBDD;
+    --background: #F8F6F0;
+    --white: #FFFFFF;
+    --text: #333A32;
+    --muted: #85877D;
+    --border: #E8E3D8;
+    --shadow: 0 8px 28px rgba(45, 57, 40, .08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    color: var(--forest);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+p {
+    color: var(--muted);
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: var(--forest) !important;
+    padding: 17px 0;
+    box-shadow: 0 4px 18px rgba(0,0,0,.12);
+}
+
+.navbar-brand {
+    color: var(--cream) !important;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* LOGIN */
+
+.login-bg {
+    background:
+        linear-gradient(135deg, rgba(25,49,36,.96),
+        rgba(81,57,35,.91));
+}
+
+.login-bg .card {
+    border: none;
+    border-radius: 22px;
+    padding: 35px !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25) !important;
+}
+
+.login-bg h2 {
+    color: var(--forest);
+    font-size: 2rem;
+}
+
+/* CARDS */
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    box-shadow: var(--shadow);
+    transition: .25s ease;
+}
+
+.card:hover {
+    box-shadow: 0 14px 35px rgba(45,57,40,.12);
+}
+
+/* DASHBOARD */
+
+.menu-card {
+    display: block;
+    height: 100%;
+    padding: 28px;
+    background: var(--white);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 17px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.menu-card::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--olive);
+    top: 0;
+    left: 0;
+    transition: .3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--olive);
+    color: var(--forest);
+    box-shadow: 0 16px 35px rgba(36,61,48,.13);
+}
+
+.menu-card:hover::before {
+    background: var(--gold);
+    width: 7px;
+}
+
+.menu-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.menu-card p {
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* BUTTONS */
+
+.btn {
+    border-radius: 9px;
+    padding: 10px 18px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.btn-primary {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--olive);
+    border-color: var(--olive);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: var(--olive);
+    border-color: var(--olive);
+    color: white;
+}
+
+.btn-success:hover {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-danger {
+    border-radius: 8px;
+}
+
+/* FORMS */
+
+.form-control,
+.form-select {
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 11px 13px;
+    background: white;
+    color: var(--text);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--olive);
+    box-shadow: 0 0 0 .2rem rgba(113,132,91,.18);
+}
+
+.form-label {
+    color: var(--forest);
+    font-weight: 600;
+}
+
+/* TABLES */
+
+.table {
+    background: white;
+    vertical-align: middle;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 16px;
+    border: none;
+}
+
+.table tbody td {
+    padding: 15px;
+    border-color: var(--border);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #F8F6F0;
+}
+
+.table tbody tr:hover td {
+    background: var(--olive-light);
+}
+
+/* BADGES */
+
+.badge {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.bg-primary {
+    background-color: var(--forest) !important;
+}
+
+.bg-success {
+    background-color: var(--olive) !important;
+}
+
+/* ALERTS */
+
+.alert {
+    border: none;
+    border-radius: 12px;
+}
+
+/* LINKS */
+
+a {
+    transition: .2s ease;
+}
+
+.container > a:first-child {
+    color: var(--brown);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container > a:first-child:hover {
+    color: var(--olive);
+}
+
+/* GENERAL */
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+hr {
+    border-color: var(--border);
+}
+
+::selection {
+    background: var(--olive-light);
+    color: var(--forest);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    .login-bg .card {
+        padding: 24px !important;
+    }
+
+    .menu-card {
+        padding: 22px;
+    }
+
+    .table {
+        font-size: .85rem;
+    }
+}
+
+
+/* AJUSTE FINAL: TEMA CLARO BOSQUES & BRASAS */
+
+:root {
+    color-scheme: light;
+}
+
+html,
+body {
+    background-color: #F8F6F0 !important;
+    color: #333A32 !important;
+}
+
+main,
+main.container {
+    background-color: #F8F6F0 !important;
+}
+
+.menu-card,
+.card,
+.summary-card {
+    background-color: #FFFFFF !important;
+    color: #333A32 !important;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #243D30 !important;
+}
+
+p {
+    color: #85877D;
+}
+
+.table {
+    background-color: #FFFFFF !important;
+}
+
+.table tbody td {
+    color: #333A32 !important;
+}
+
+.navbar {
+    background-color: #243D30 !important;
+}
